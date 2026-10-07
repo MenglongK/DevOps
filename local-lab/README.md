@@ -1,4 +1,4 @@
-## NOTE 
+## NOTE
 Note related to vagrant and virtualbox 
 
 - Check if your terminal able to use vagrant
@@ -12,8 +12,9 @@ vagrant init ubuntu/jammy64
 vagrant init bento/ubuntu-24.04
 
 # start the vm 
-vagrant up 
+vagrant up
 vagrant status 
+vagrant ssh-config
 vagrant ssh 
 
 # shutdown 
@@ -40,3 +41,17 @@ config.vm.synced_folder "./data", "/home/vagrant/workspace", type:"sshfs"
 # uncomment below line
 config.vm.synced_folder ".", "/vagrant", disabled: true
 ```
+
+### Download extension remote explorer
+![alt text](image.png)
+
+```bash
+# Check status vagrant to make sure it running
+vagrant status
+
+# Run below command to get config info
+vagrant ssh-config
+
+# go to remote explorer and past ssh-config to the top
+```
+![alt text](image-1.png)
